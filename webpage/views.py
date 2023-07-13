@@ -5,7 +5,7 @@ def home(request):
     return HttpResponse("Hello, this is my first home page django app")
 
 def about(request):
-    return HttpResponse("About us")
+    return HttpResponse("About me")
 
 def contact(request):
-    return HttpResponse("Contact us")
+    return HttpResponse("Contact me")
