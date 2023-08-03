@@ -18,7 +18,7 @@ class student (models.Model):
 
     class Meta:
         verbose_name = ("student")
-        verbose_name_plural = ("student")
+        verbose_name_plural = ("students")
 
     def __str__(self):
         return self.name

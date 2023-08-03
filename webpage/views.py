@@ -1,14 +1,27 @@
 from django.shortcuts import render, HttpResponse  
-
+from . import models
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
-    # return HttpResponse("Hello, this is my home page django app")
+    context = {}
+
+    students = models.student.objects.all().order_by("-id")
+
+    context = {
+        'students' : students,
+    }
+
+    return render(request, 'index.html', context)
+   
 
 def about(request):
     return render(request, 'about.html')
-    # return HttpResponse("About me")
+    
 
 def contact(request):
     return render(request, 'contact.html')
-    # return HttpResponse("Contact me")
+
+def studentdetails(request, id) :
+    context = {}
+    student = models.student.objects.get(id=id)
+    context['student'] = student
+    return render (request, 'details.html', context)
