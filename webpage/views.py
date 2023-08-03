@@ -22,6 +22,8 @@ def contact(request):
 
 def studentdetails(request, id) :
     context = {}
-    student = models.student.objects.get(id=id)
-    context['student'] = student
+    # student = models.student.objects.get(id=id)
+    student = models.student.objects.filter(id=id)
+    for student in student :
+        context['student'] = student
     return render (request, 'details.html', context)
