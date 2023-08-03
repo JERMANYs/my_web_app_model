@@ -2,9 +2,10 @@
 <!---->
 {% block  title%}ติดต่อฉัน{% endblock title %}
 <!---->
-{% block content %}<table class="table">
+{% block content %}
+{{ message }}
+<table class="table">
   <!---->
-  {{ message }}
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -19,9 +20,9 @@
     <tbody>
       {% for student in students %}
       <tr>
-        <th scope="row">1</th>
-        <td><a href="{% url 'details' student.id %}">{{ student.std_id}}</a><td>
-        <td>{{ student.prefix }}</td>
+        <td >1</td>
+        <td><a href="{% url 'details' student.id %}">{{ student.std_id}}</a></td>
+        <td>{{ student.prefix_str }}</td>
         <td>{{ student.name }}</td>
         <td>{{ student.lastname }}</td>
         <td>{{ student.phone }}</td>
