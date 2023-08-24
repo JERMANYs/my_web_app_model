@@ -79,12 +79,12 @@ DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE' : 'django.db.backends.postgresql' ,
-        'NAME' : 'postgres' ,
+        'ENGINE' : 'django.db.backends.postgresql_psycopg2' ,
+        'NAME' : 'press_db' ,
         'USER' : 'postgres' ,
-        'PASSWORD' : 'ggkug1230890',
-        'HOST' : 'db.gqqfijelphgswtncoyvi.supabase.co' ,
-        'PORT' : '6543',
+        'PASSWORD' : '123456',
+        'HOST' : 'localhost' ,
+        'PORT' : '',
     }
 }
 
