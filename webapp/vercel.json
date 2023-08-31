@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "postgres/wsgi.py",
+        "src": "webapp/wsgi.py",
         "use": "@vercel/python"
       },
       {
@@ -20,7 +20,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "postgres/wsgi.py"
+        "dest": "webapp/wsgi.py"
       }
     ]
   }
